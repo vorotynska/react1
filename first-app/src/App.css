@@ -30,7 +30,7 @@
     background-color: #212224;
   }
 
-  .nav--logo_icons {
+  .nav--logo_icon {
     width: 30px;
     margin-right: 10px;
   }
@@ -115,7 +115,7 @@
     }
 
     main.dark {
-      background-image: url("");
+      background-image: url("./images/reactjs-icon\ 2.png");
       background-color: #282035;
       color: white;
     }
