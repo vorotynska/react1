@@ -2,60 +2,127 @@
     box-sizing: border-box;
  }
 
+ h1, h2, h3, h4, h5, p {
+   margin: 0;
+ }
+
  body {
-    display: flex;
     margin: 0;
-    font-family: Inter, sans-serif;
-    background-color: #c7c5ca;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
  }
 
   .container {
-    max-width: 500px;
-    background-color: #282035;
-    box-shadow: 15px  #3e3b41;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 
   nav {
     display: flex;
     align-items: center;
-    background-color: #212224;
-    height: 90px;
+    background-color: #ffffff;
+    height: 60px;
     padding: 30px 25px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
   }
 
-  .nav--logo_text, .nav-title {
-    margin: 0;
+  nav.dark {
+    background-color: #212224;
   }
 
-  .nav--icons {
-    height: 30px;
-    margin-right: 7px;
+  .nav--logo_icons {
+    width: 30px;
+    margin-right: 10px;
   }
 
   .nav--logo_text {
+    color: #61DAFB;
     margin-right: auto;
-    color: #61DAF8;
-    font-weight: 700;
-    font-size: 22px;
   }
 
-  .nav--title {
-    color: #deebf8;
+  .nav-title {
+    color: #DEEBF8;
+  }
+
+  .toggler {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggler p {
+    font-size: 0.625rem;
     font-weight: 600;
+  }
+
+  .toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #282834;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border:  1px solid black;
+    box-sizing: content-box;
+  }
+  
+  nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #f5f5f5;
+  }
+
+  .toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  nav.dark .toggler--slider--circle {
+    background-color: black;
+  }
+
+  .toggler--light {
+    color: #28283a;
+  }
+
+  nav.dark .toggler--light {
+    color: #918e9b;
+  }
+
+  .toggler--dark {
+    color: #D5D4D8;
+  }
+
+  nav.dark .toggler--dark {
+    color: #ffffff;
+  }
+
+  nav.dark .toggler--slider {
+    justify-content: flex-start;
   }
 
   main {
     padding: 57px 27px;
-     color: white;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: right center;
+    flex: 1 1 auto;
+    background-color: white;
+     color: #28283A;
+    }
+
+    main.dark {
+      background-image: url("");
+      background-color: #282035;
+      color: white;
     }
 
   .main--title {
     margin: 0;
     font-size: 39px;
-    color: #deebf8;
     letter-spacing: -0.05em;
   }
 
@@ -71,4 +138,5 @@
 
    .main--facts > li::marker {
     font-size: 1.4rem;
+    color: #61DAFB;
    }
